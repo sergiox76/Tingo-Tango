@@ -1,9 +1,12 @@
 package com.tingotango.service;
 
+import com.tingotango.exceptions.KidsException;
 import com.tingotango.model.Kid;
 import com.tingotango.model.ListaDECircular;
 import lombok.Data;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @Data
@@ -18,5 +21,13 @@ public class ListaDECircularService {
         kids.addKidToEnd(new Kid("Jhair Torres","003",(byte)19));
         kids.addKidToEnd(new Kid("Sebastian Rugeles","004",(byte)19));
         kids.addKidToEnd(new Kid("John Madrid","005",(byte)19));
+    }
+    public List<Kid> getAllKids()throws KidsException {
+        return kids.getAllKids();
+    }
+
+    public String addKidToEnd(Kid newKid){
+        kids.addKidToEnd(newKid);
+        return "Adicionado correctamente";
     }
 }
