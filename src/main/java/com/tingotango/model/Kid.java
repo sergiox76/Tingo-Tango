@@ -8,5 +8,5 @@ import lombok.Data;
 public class Kid {
     private String name;
     private String id;
-    private byte age;
+
 }
