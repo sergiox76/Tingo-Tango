@@ -5,8 +5,5 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Kid {
-    private String name;
-    private String id;
-    private byte age;
+public class Question  {
 }
