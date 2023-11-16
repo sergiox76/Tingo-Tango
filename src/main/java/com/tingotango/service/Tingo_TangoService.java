@@ -91,8 +91,8 @@ public class Tingo_TangoService {
             }
         }
         else {
-            throw new KidsException("No se puede eliminar un participante " +
-                    "mientras el juego esta en curso");
+            throw new KidsException("mientras el juego esta en curso " +
+                    "No se puede eliminar un participante");
         }
     }
 
@@ -108,7 +108,7 @@ public class Tingo_TangoService {
         if (game.getAwaitingKid()==null || !kidId.equals(game.getAwaitingKid().getId())) {
             try {
                 listDEService.moveKid(pos,kidId);
-                return "Niño movido";
+                return "Niño movido correctamente";
             } catch (KidsException e) {
                 throw new KidsException(e.getMessage());
             }
