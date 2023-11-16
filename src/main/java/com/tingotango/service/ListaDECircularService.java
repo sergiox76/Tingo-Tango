@@ -29,6 +29,14 @@ public class ListaDECircularService {
             throw new KidsException(e.getMessage());
         }
     }
+    public String addToEnd(Kid kid) {
+        kids.addToEnd(kid);
+        return "Adicionado";
+    }
+    public String addToStart(Kid kid){
+        kids.addToStart(kid);
+        return "Adicionado";
+    }
     public String deleteInPos(int pos) throws KidsException{
         try {
             kids.deleteByPos(pos);
@@ -41,15 +49,7 @@ public class ListaDECircularService {
         kids.insertInPos(pos,kid);
         return "Adicionado";
     }
-    public String addToEnd(Kid kid) {
-        kids.addToEnd(kid);
-        return "Adicionado";
-    }
 
-    public String addToStart(Kid kid){
-        kids.addToStart(kid);
-        return "Adicionado";
-    }
 
     public String moveKid(int pos, String kidId) throws KidsException{
         try {
