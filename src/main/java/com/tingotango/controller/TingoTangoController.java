@@ -126,10 +126,10 @@ public class TingoTangoController {
     }
 
     @GetMapping(path = "/answer")
-    public ResponseEntity<ResponseDTO> answerQuestion(@RequestBody DataStructureDTO response){
+    public ResponseEntity<ResponseDTO> answer(@RequestBody DataStructureDTO response){
         try {
             return new ResponseEntity<>(new ResponseDTO(HttpStatus.OK.value(),
-                    tingoTangoService.answerQuestion(response),null),HttpStatus.OK);
+                    tingoTangoService.answer(response),null),HttpStatus.OK);
         } catch (KidsException e) {
             List<String> errors = new ArrayList<>();
             errors.add(e.getMessage());
