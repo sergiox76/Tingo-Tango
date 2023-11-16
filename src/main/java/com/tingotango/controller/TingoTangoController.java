@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 @RestController
-@RequestMapping(path="/tingo-tango")
+@RequestMapping(path="/tingotango")
 public class TingoTangoController {
     @Autowired
     private Tingo_TangoService tingoTangoService;
@@ -82,7 +82,7 @@ public class TingoTangoController {
         }
     }
 
-    @PutMapping(path = "/movekid/{pos}/{kidid}")
+    @PutMapping(path = "/movekid/{pos}/{id}")
     public ResponseEntity<ResponseDTO> moveKid(@PathVariable int pos, @PathVariable String kidid){
         try{
             return new ResponseEntity<>(new ResponseDTO(HttpStatus.OK.value(),
@@ -107,7 +107,7 @@ public class TingoTangoController {
                 tingoTangoService.addKidToEnd(kid),null),HttpStatus.OK);
     }
 
-    @GetMapping(path = "/rolegame")
+    @GetMapping(path = "/game")
     public ResponseEntity<ResponseDTO> roleGame(){
         try {
             return new ResponseEntity<>(new ResponseDTO(HttpStatus.OK.value(),
@@ -125,7 +125,7 @@ public class TingoTangoController {
                 tingoTangoService.getQuestion(),null),HttpStatus.OK);
     }
 
-    @GetMapping(path = "/answerquestion")
+    @GetMapping(path = "/answer")
     public ResponseEntity<ResponseDTO> answerQuestion(@RequestBody DataStructureDTO response){
 
         try {

@@ -22,7 +22,7 @@ public class QuestionController {
         return new ResponseEntity<>(new ResponseDTO(HttpStatus.OK.value(),
                 questionListService.getAll(),null),HttpStatus.OK);
     }
-    @GetMapping(path="/getquestionbyid/{questionid}")
+    @GetMapping(path="/getquestionbyid/{id}")
     public ResponseEntity<ResponseDTO> getQuestionById(@PathVariable String questionid){
         try {
             return new ResponseEntity<>(new ResponseDTO(HttpStatus.OK.value(),
@@ -34,7 +34,7 @@ public class QuestionController {
                     null,errors),HttpStatus.OK);
         }
     }
-    @PutMapping(path = "/updatequestion/{questionid}")
+    @PutMapping(path = "/updatequestion/{id}")
     public ResponseEntity<ResponseDTO> updateQuestion(@PathVariable String questionid, @RequestBody Question updatedQuestion){
         try {
             return new ResponseEntity<>(new ResponseDTO(HttpStatus.OK.value(),
@@ -46,7 +46,7 @@ public class QuestionController {
                     null,errors),HttpStatus.OK);
         }
     }
-    @DeleteMapping(path = "/deletequestionbyid/{questionid}")
+    @DeleteMapping(path = "/deletequestionbyid/{id}")
     public ResponseEntity<ResponseDTO> deleteQuestionById(@PathVariable String questionid){
         try {
             return new ResponseEntity<>(new ResponseDTO(HttpStatus.OK.value(),

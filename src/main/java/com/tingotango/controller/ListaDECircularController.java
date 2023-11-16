@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/tingotango")
+@RequestMapping(path = "/tingo_tango")
 public class ListaDECircularController {
     @Autowired
     private ListaDECircularService listDECircularService;
@@ -46,7 +46,7 @@ public class ListaDECircularController {
                     null,errors),HttpStatus.OK);
         }
     }
-    @GetMapping(path = "/movekid/{pos}/{kidid}")
+    @GetMapping(path = "/movekid/{pos}/{id}")
     public ResponseEntity<ResponseDTO> moveKid(@PathVariable int pos, @PathVariable String kidid){
         try {
             return new ResponseEntity<>(new ResponseDTO(HttpStatus.OK.value(),

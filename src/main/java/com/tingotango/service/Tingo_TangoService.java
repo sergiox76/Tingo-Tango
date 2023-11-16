@@ -158,7 +158,7 @@ public class Tingo_TangoService {
     public String answerQuestion(DataStructureDTO response)throws KidsException{
         if(response.getKidData().getId().equals(game.getAwaitingQuestion().getKidData().getId())){
 
-            Question question = null;
+            Question question;
             try {
                 question = questionService.getQuestionById(response.getQuestionData().getId());
             } catch (Exception e) {
