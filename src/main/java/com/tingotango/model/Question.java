@@ -9,6 +9,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Question  {
     private String question;
+    private List<String> options;
+    private Byte correctPos;
     private String id;
-    private List<String> option;
 }

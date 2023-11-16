@@ -10,5 +10,5 @@ import java.util.List;
 public class ResponseDTO {
     private int code;
     Object data;
-    List<String>error;
+    List<String>errors;
 }
