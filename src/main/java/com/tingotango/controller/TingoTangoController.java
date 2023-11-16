@@ -127,7 +127,6 @@ public class TingoTangoController {
 
     @GetMapping(path = "/answer")
     public ResponseEntity<ResponseDTO> answerQuestion(@RequestBody DataStructureDTO response){
-
         try {
             return new ResponseEntity<>(new ResponseDTO(HttpStatus.OK.value(),
                     tingoTangoService.answerQuestion(response),null),HttpStatus.OK);

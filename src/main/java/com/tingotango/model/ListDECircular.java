@@ -119,16 +119,16 @@ public class ListDECircular {
             NodeDECircular temp = this.head;
             do {
                 if (temp.getData().getId().equals(id)) {
-                    // If node to be deleted is head node
+
                     if (temp == this.head) {
                         this.head = this.head.getNext();
                         this.head.setPrevious(temp.getPrevious());
                     }
-                    // Change next only if node to be deleted is NOT the last node
+
                     if (temp.getNext() != null) {
                         temp.getNext().setPrevious(temp.getPrevious());
                     }
-                    // Change prev only if node to be deleted is NOT the first node
+
                     if (temp.getPrevious() != null) {
                         temp.getPrevious().setNext(temp.getNext());
                     }

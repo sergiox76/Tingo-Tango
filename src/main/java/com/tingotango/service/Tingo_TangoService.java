@@ -19,7 +19,6 @@ import java.util.Random;
 public class Tingo_TangoService {
     private final QuestionService questionService;
     private final ListaDECircularService listDEService;
-    //Tingo Tango object
     private Game game;
     @Autowired
     public Tingo_TangoService(QuestionService questionService,ListaDECircularService listDEService){
